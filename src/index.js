@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+// const element=<h1>Hello, World</h1>;
+
+//Below code is written in JSX
+// const element=(<div>
+//   <h1>Welcome to React Programming World</h1>
+//   <h1>Understanding React Rendering....</h1>
+// </div>);
+///////////////////////
+
+// const element=React.createElement("div",null,'Welcome to ReactJS....')
+
+const element=React.createElement("div",{className:"testClass"},
+React.createElement("h1",null,'Hello,'),
+React.createElement("h2",null,'How are you?')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(element,document.getElementById('root'));
